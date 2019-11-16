@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
  
 # 加载数据
 def loadDataSet(fileName):
-    data = np.loadtxt(fileName, dtype=int, comments='#', delimiter=None, converters=None, skiprows=0, usecols=None, unpack=False, ndmin=0)
+    data = np.loadtxt(fileName, dtype=float, comments='#', delimiter=None, converters=None, skiprows=0, usecols=None, unpack=False, ndmin=0)
     return data
  
 # 欧氏距离计算
@@ -79,8 +79,6 @@ def showCluster(dataSet,k,centroids,clusterAssment):
     # 绘制质心
     for i in range(k):
         plt.plot(centroids[i,0],centroids[i,1],mark[i])
-    
-
  
     plt.show()
 
